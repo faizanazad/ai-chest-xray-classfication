@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload X-Ray</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            X-Ray AI
+        </div>
+
+        <a href="/" class="nav-link">
+            Home
+        </a>
+
+    </nav>
+
+
+    <main class="page-section">
+
+        <div class="container">
+
+            <div class="page-title">
+
+                <h1>Upload X-Ray</h1>
+
+                <p>
+                    Select a chest X-ray image for model classification.
+                </p>
+
+            </div>
+
+
+            <div class="upload-card">
+
+                <form action="/predict"
+                      method="post"
+                      enctype="multipart/form-data">
+
+                    <div class="upload-box">
+
+                        <h3>
+                            Choose an X-Ray Image
+                        </h3>
+
+                        <p>
+                            Supported image formats: JPG, JPEG, PNG
+                        </p>
+
+                        <input
+                            type="file"
+                            name="file"
+                            class="file-input"
+                            accept="image/png,image/jpeg,image/jpg"
+                            onchange="previewImage(event)"
+                            required
+                        >
+
+                        <img
+                            id="preview"
+                            class="preview"
+                            alt="Selected X-Ray preview"
+                        >
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <a href="/"
+                           class="btn btn-secondary">
+                            Back to Home
+                        </a>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+                            Predict
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <div class="disclaimer" style="margin-top: 30px;">
+
+                <strong>Note:</strong>
+                This application is an educational AI demonstration.
+                Results are model predictions and are not a medical diagnosis.
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer class="footer">
+        AI-Based Chest X-Ray Classification Project
+    </footer>
+
+
+    <script>
+
+        function previewImage(event) {
+
+            const file = event.target.files[0];
+
+            const preview =
+                document.getElementById("preview");
+
+            if (file) {
+
+                preview.src =
+                    URL.createObjectURL(file);
+
+                preview.style.display = "block";
+
+            } else {
+
+                preview.style.display = "none";
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Upload X-Ray</title>
+</head>
+
+<body>
+
+    <h1>Upload X-Ray Image</h1>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+
+        <input type="file" name="file" accept="image/*" required>
+
+        <br><br>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    <br>
+
+    <a href="/">Back to Home</a>
+
+</body>
+</html> -->

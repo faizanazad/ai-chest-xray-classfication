@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI X-Ray Detection</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">X-Ray AI</div>
+
+        <a href="/camera" class="nav-link">
+            Detection
+        </a>
+    </nav>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    CNN Powered Image Classification
+                </div>
+
+                <h1>
+                    AI-Based
+                    <span>Chest X-Ray</span>
+                    Detection
+                </h1>
+
+                <p>
+                    Upload a chest X-ray image and let the trained
+                    convolutional neural network generate a classification
+                    result through a simple web interface.
+                </p>
+
+                <a href="/camera"
+                   class="btn btn-primary">
+                    Start Detection
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="container features">
+
+            <div class="feature-card">
+                <h3>🧠 CNN Model</h3>
+
+                <p>
+                    Uses a trained convolutional neural network
+                    for chest X-ray image classification.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>⚡ FastAPI</h3>
+
+                <p>
+                    A lightweight FastAPI backend handles image
+                    uploads and model predictions.
+                </p>
+            </div>
+
+
+            <div class="feature-card">
+                <h3>🖼️ Image Processing</h3>
+
+                <p>
+                    Uploaded images are resized and normalized
+                    before being passed to the model.
+                </p>
+            </div>
+
+        </section>
+
+
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong>
+            This project is created for educational and demonstration
+            purposes only. Model predictions should not be considered
+            medical diagnosis or medical advice.
+        </div>
+
+    </main>
+
+
+    <footer class="footer">
+        AI-Based Chest X-Ray Classification Project
+    </footer>
+
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Upload X-Ray</title>
+</head>
+
+<body>
+
+    <h1>Upload X-Ray Image</h1>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+
+        <input
+            type="file"
+            name="file"
+            accept="image/*"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    <br>
+
+    <a href="/">Back to Home</a>
+
+</body>
+</html> -->
