@@ -31,6 +31,20 @@ The application provides a simple web interface where users can upload an X-ray 
 - HTML
 - CSS
 
+📸 Project Screenshots
+
+1. Home Page
+
+"Home Page" (homepage.png)
+
+2. Upload X-ray
+
+"Upload X-ray" (upload-xray.png)
+
+3. Prediction Result
+
+"Prediction Result" (prediction-result.png)
+
 
 ## Project Structure
 
@@ -53,4 +67,6 @@ x-ray-detection/
 │
 └── static/
     └── style.css
+
+
 
