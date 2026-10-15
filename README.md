@@ -4,6 +4,11 @@ An AI-based web application for chest X-ray image classification using a trained
 
 The application provides a simple web interface where users can upload an X-ray image and receive the model's predicted class.
 
+
+## Live Demo [Open X-ray classification App]  (https://ai-chest-xray-classfication.onrender.com/)
+
+
+
 ## Features
 
 - Chest X-ray image upload
@@ -48,3 +53,4 @@ x-ray-detection/
 │
 └── static/
     └── style.css
+
